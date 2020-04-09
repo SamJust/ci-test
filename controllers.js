@@ -1,5 +1,11 @@
+const {
+	sum
+} = require('./domain/CalculatorService');
+
 module.exports = {
 	get: (req, res) => {
-		res.send('HUMANS MUST DIE!');
+		const result = sum(req.query.a, req.query.b);
+
+		res.send(result);
 	}
 };
