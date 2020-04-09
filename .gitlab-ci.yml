@@ -1,4 +1,13 @@
 image: node:10.15.3-alpine
 
+stages: 
+  - test
+  - echo
+
 job1:
+  stage: test
   script: npm i && npm run test
+
+echo: 
+  starge: echo
+  script: echo "I'm fine!"
