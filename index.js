@@ -20,6 +20,11 @@ app.use((req, res) => {
 	stream.pipe(res);
 });
 
+app.use((err, req, res) => {
+	console.log(`${Date.now()} ERRORED`);
+	res.sendStatus(500);
+});
+
 app.listen(PORT, () => {
 	console.log('listening ot port ' + PORT);
 });
