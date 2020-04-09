@@ -9,5 +9,5 @@ job1:
   script: npm i && npm run test
 
 echo: 
-  starge: echo
+  stage: echo
   script: echo "I'm fine!"
